@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Electronics E-Module</string>
+    <string name="btn_subject1">ELECTRONIC CIRCUITS AND DEVICES</string>
+    <string name="btn_subject2">ELECTRONIC CIRCUITS ANALYSIS AND DESIGNS</string>
+    <string name="btn_subject3">POST TEST/PRE TEST</string>
+</resources>
