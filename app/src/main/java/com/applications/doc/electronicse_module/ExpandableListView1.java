@@ -5,13 +5,16 @@ package com.applications.doc.electronicse_module;
         import java.util.List;
 
         import android.content.Context;
+        import android.content.Intent;
         import android.graphics.Typeface;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.BaseExpandableListAdapter;
+        import android.widget.ExpandableListView;
         import android.widget.TextView;
-
+        import android.widget.Toast;
+@SuppressWarnings("unchecked")
 public class ExpandableListView1 extends BaseExpandableListAdapter {
 
     private Context _context;
@@ -38,7 +41,7 @@ public class ExpandableListView1 extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getChildView(int groupPosition, final int childPosition,
+    public View getChildView(final int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
         final String childText = (String) getChild(groupPosition, childPosition);
@@ -53,6 +56,16 @@ public class ExpandableListView1 extends BaseExpandableListAdapter {
                 .findViewById(R.id.listItem1);
 
         txtListChild.setText(childText);
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(_context, MainLesson1.class);
+                 _context.startActivity(intent);
+            }
+        });
+
         return convertView;
     }
 
@@ -104,4 +117,5 @@ public class ExpandableListView1 extends BaseExpandableListAdapter {
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
+
 }

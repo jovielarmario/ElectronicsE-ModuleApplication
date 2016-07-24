@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoSubject3(View view){
-        Intent openNewActivity = new Intent(this, Subject3.class);
+        Intent openNewActivity = new Intent(this, PrePostTest.class);
         startActivity(openNewActivity);
     }
 

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +54,16 @@ public class ExpandableListView2 extends BaseExpandableListAdapter {
                 .findViewById(R.id.listItem2);
 
         txtListChild.setText(childText);
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(_context, MainLesson2.class);
+                _context.startActivity(intent);
+            }
+        });
+
         return convertView;
     }
 
