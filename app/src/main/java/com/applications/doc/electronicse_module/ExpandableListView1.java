@@ -61,8 +61,13 @@ public class ExpandableListView1 extends BaseExpandableListAdapter {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(_context, MainLesson1.class);
-                 _context.startActivity(intent);
+                if((groupPosition==0 && childPosition==2)||(groupPosition==1 && childPosition==4)||(groupPosition==2 && childPosition==2)||(groupPosition==3 && childPosition==3)){
+                    Intent intent = new Intent(_context, QUIZ.class);
+                    _context.startActivity(intent);
+                }else {
+                    Intent intent = new Intent(_context, MainLesson1.class);
+                    _context.startActivity(intent);
+                }
             }
         });
 

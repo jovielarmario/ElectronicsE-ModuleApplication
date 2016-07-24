@@ -7,6 +7,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:label="PRE TEST"
     tools:context="com.applications.doc.electronicse_module.PrePostTest">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRE TEST"
+        android:id="@+id/btn_pretest"
+        android:onClick="gotoPreTest"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="58dp"
+        android:enabled="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btn_subject2"
+        android:layout_alignEnd="@+id/btn_subject2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POST TEST"
+        android:id="@+id/btn_posttest"
+        android:onClick="gotoPostTest"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="true" />
 </RelativeLayout>

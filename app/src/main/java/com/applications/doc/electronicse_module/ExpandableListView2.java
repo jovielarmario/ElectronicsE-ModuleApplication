@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
-
+@SuppressWarnings("unchecked")
 public class ExpandableListView2 extends BaseExpandableListAdapter {
 
     private Context _context;
@@ -39,7 +39,7 @@ public class ExpandableListView2 extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getChildView(int groupPosition, final int childPosition,
+    public View getChildView(final int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
         final String childText = (String) getChild(groupPosition, childPosition);
@@ -59,8 +59,13 @@ public class ExpandableListView2 extends BaseExpandableListAdapter {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(_context, MainLesson2.class);
-                _context.startActivity(intent);
+                if((groupPosition==0 && childPosition==5)||(groupPosition==1 && childPosition==4)||(groupPosition==2 && childPosition==3)||(groupPosition==3 && childPosition==4)||(groupPosition==4 && childPosition==4)){
+                    Intent intent = new Intent(_context, QUIZ.class);
+                    _context.startActivity(intent);
+                }else {
+                    Intent intent = new Intent(_context, MainLesson2.class);
+                    _context.startActivity(intent);
+                }
             }
         });
 

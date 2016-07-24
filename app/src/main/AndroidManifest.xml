@@ -23,7 +23,10 @@
             android:name=".Subject2"
             android:label="@string/btn_subject2" />
         <activity android:name=".PrePostTest" />
-        <activity android:name=".MainLesson2"></activity>
+        <activity android:name=".MainLesson2" />
+        <activity android:name=".QUIZ" />
+        <activity android:name=".PreTest" />
+        <activity android:name=".PostTest"></activity>
     </application>
 
 </manifest>

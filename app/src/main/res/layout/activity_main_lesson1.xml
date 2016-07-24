@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:label=""
+    android:label="@string/btn_subject1"
     tools:context="com.applications.doc.electronicse_module.MainLesson1">
 
 </RelativeLayout>
