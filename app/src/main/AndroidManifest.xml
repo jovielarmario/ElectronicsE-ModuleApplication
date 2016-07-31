@@ -26,7 +26,8 @@
         <activity android:name=".MainLesson2" />
         <activity android:name=".QUIZ" />
         <activity android:name=".PreTest" />
-        <activity android:name=".PostTest"></activity>
+        <activity android:name=".PostTest" />
+        <activity android:name=".Result"></activity>
     </application>
 
 </manifest>
